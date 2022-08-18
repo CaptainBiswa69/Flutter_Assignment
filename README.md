@@ -1,16 +1,12 @@
 # flutter_assignment
 
-A new Flutter project.
+Flutter Assignment - Design the single -page Flutter application.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. It is a single page flutter project which will display the products that are present in the database which will be fectched using REST API.
+2. For making http requests http: ^0.13.5 SDK is used.
+3. Data is shown in the homepage using GridView and Crad widget.
 
-A few resources to get you started if this is your first Flutter project:
+![alt text](https://drive.google.com/file/d/1k6YuG-6s9v89SifuWkOQT3oHHTibZWRC/view?usp=sharing)   
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
