@@ -64,6 +64,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           Align(
+                            heightFactor: 0,
                               alignment: Alignment.center,
                               child: Padding(
                                 padding:
