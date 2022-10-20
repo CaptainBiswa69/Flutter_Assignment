@@ -32,6 +32,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+
+    List<CategorysReponse>? _catResponse = products?.categorysReponse;
+    _catResponse?.sort((a, b) => a.categoryName.compareTo(b.categoryName) );
     return Scaffold(
         appBar: AppBar(title: const Center(child: Text("Products"))),
         body: isLoaded
@@ -43,7 +46,7 @@ class _HomePageState extends State<HomePage> {
                             crossAxisCount: 2,
                             mainAxisSpacing: 15,
                             crossAxisSpacing: 15),
-                    itemCount: products!.categorysReponse.length,
+                    itemCount: _catResponse?.length,
                     itemBuilder: (context, index) {
                       return Card(
                         elevation: 10,
@@ -54,11 +57,10 @@ class _HomePageState extends State<HomePage> {
                             padding: const EdgeInsets.all(8.0),
                             child: CircleAvatar(
                               backgroundColor: Colors.transparent,
-                              foregroundImage: products?.categorysReponse[index]
+                              foregroundImage: _catResponse![index]
                                           .categoryImage !=
                                       null
-                                  ? NetworkImage(products!
-                                      .categorysReponse[index].categoryImage!)
+                                  ? NetworkImage(_catResponse![index].categoryImage!)
                                   : const NetworkImage(""),
                               radius: 60,
                             ),
